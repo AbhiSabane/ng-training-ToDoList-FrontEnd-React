@@ -83,11 +83,11 @@ const TaskList = () => {
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'short', day: 'numeric' };
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-GB', options); // You can also use 'en-US' or any locale you prefer.
+    return date.toLocaleDateString('en-GB', options);
   };
 
 
-  const handeledit = (id) => {
+  const handelEdit = (id) => {
     navigate(`/EditTaskForm/${id}`); // Redirect to the edit form with the task ID
   };
 
@@ -111,10 +111,10 @@ const TaskList = () => {
             </div>
             <div className="d-flex">
               <Link to="/TaskForm" className="btn btn-primary mb-3 me-2">
-                <AddIcon/> New Task
+                <AddIcon /> New Task
               </Link>
               <button onClick={handleRefresh} style={{ backgroundColor: '#fcf07e' }} className="btn mb-3">
-                <RefreshIcon/> Refresh
+                <RefreshIcon /> Refresh
               </button>
             </div>
           </div>
@@ -159,7 +159,7 @@ const TaskList = () => {
                           aria-expanded="false"
                           style={{ backgroundColor: '#fcf07e' }}
                         >
-                          
+
                         </button>
                         <ul
                           className="dropdown-menu"
@@ -169,7 +169,7 @@ const TaskList = () => {
                             <a
                               className="dropdown-item"
                               href="#"
-                              onClick={() => handeledit(user.id)}
+                              onClick={() => handelEdit(user.id)}
                             >
                               Edit
                             </a>

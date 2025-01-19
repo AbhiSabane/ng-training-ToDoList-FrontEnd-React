@@ -18,7 +18,7 @@ const EditTaskForm = () => {
     const [priorityOptions, setPriorityOptions] = useState([]);
     const [assignedToOptions, setAssignedToOptions] = useState([]);
 
-    // Mock dropdown data
+    // dropdown data
     const statusData = [
         { id: "1", Name: "In Progress" },
         { id: "2", Name: "Not Started" },
@@ -89,11 +89,11 @@ const EditTaskForm = () => {
         await axios.put(`http://localhost:5003/users/${id}`, formData);
         navigate("/"); // Redirect back to the task list
         Swal.fire({
-                        title: 'Task Updated Successfully!',
-                        icon: 'success',
-                        buttons: false,
-                        timer: 2000,
-                    });
+            title: 'Task Updated Successfully!',
+            icon: 'success',
+            buttons: false,
+            timer: 2000,
+        });
     };
 
     const handleCancel = () => {

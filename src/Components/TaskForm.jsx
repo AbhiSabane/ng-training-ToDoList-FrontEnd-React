@@ -140,7 +140,7 @@ const TaskForm = () => {
                                 ))}
                             </select>
                         </div>
-                        
+
                         <div className="form-group col-md-6 col-sm-12 mt-3">
                             <label htmlFor="dueDate" className="form-label"><span style={{ color: 'red' }}>*</span>Due Date</label>
                             <input
